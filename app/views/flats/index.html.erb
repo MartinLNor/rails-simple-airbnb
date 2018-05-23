@@ -1,0 +1,32 @@
+<div class="container">
+  <h1>
+      <div class="row">
+    <%  @flats.each do |flat| %>
+        <div class="col-xs-12 col-md-6 col-lg-3">
+          <div class="card">
+            <div class="card-img-top">
+              <%= image_tag 'https://picsum.photos/200/200/?blur', class: 'img-card' %>
+            </div>
+            <div class="card-body text-center">
+              <div class="flat-name">
+                <h2><%= flat.name %></h2>
+              </div>
+              <div class="flat-address">
+               <p><%= flat.address %></p>
+              </div>
+              <div class="flat-symbol text-center">
+                <ul class= "list-inline">
+                  <li class="price">
+                    <i class="fas fa-dollar-sign"></i><%= flat.price_per_night %>
+                  </li>
+                  <li class="guest">
+                    <i class="fas fa-user"></i><%= flat.number_of_guests %>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </div>
+      </div>
+    <% end %>
+    </div>
+</div>
